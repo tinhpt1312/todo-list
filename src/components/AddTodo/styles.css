@@ -1,0 +1,37 @@
+.add-todo {
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.add-todo input[type="text"] {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #b3b3b3;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  width: 80%;
+}
+
+.add-todo input[type="text"]:focus {
+  border: 1.5px solid #3b82f6;
+  background: #f0f8ff;
+}
+
+.add-todo button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background: #3b82f6;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-todo button:hover {
+  background: #2563eb;
+}

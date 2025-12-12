@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./styles.css";
+import Input from "../Input";
 
 interface AddTodoProps {
   onAdd: (text: string) => void;
@@ -19,7 +21,7 @@ export default function AddTodo({ onAdd }: AddTodoProps) {
   return (
     <div>
       <form className="add-todo" onSubmit={handleSubmit}>
-        <input
+        <Input
           type="text"
           placeholder="add new task"
           value={text}

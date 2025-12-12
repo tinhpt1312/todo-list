@@ -1,6 +1,8 @@
 import { useState } from "react";
-import type { Todo } from "../hooks/useTodo";
-import "./TodoItem.css";
+import type { Todo } from "../../hooks/useTodo";
+import Button from "../Button";
+import Input from "../Input";
+import "./styles.css";
 
 interface TodoItemProps {
   todo: Todo;
@@ -25,7 +27,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onUpdate }: TodoIte
       <label>
         <input type="checkbox" checked={todo.completed} onChange={() => onToggle(todo.id)} />
         {isEditing ? (
-          <input
+          <Input
             type="text"
             value={editText}
             onChange={(e) => setEditText(e.target.value)}
@@ -33,25 +35,24 @@ export default function TodoItem({ todo, onToggle, onDelete, onUpdate }: TodoIte
               if (e.key === "Enter") handleUpdate();
               if (e.key === "Escape") setIsEditing(false);
             }}
-            autoFocus
           />
         ) : (
           <span className={todo.completed ? "completed" : ""}>{todo.text}</span>
         )}
       </label>
-      <div>
+      <div className="btn">
         {isEditing ? (
-          <button className="update-btn" onClick={handleUpdate}>
+          <Button variant="primary" className="update-btn" onClick={handleUpdate}>
             Save
-          </button>
+          </Button>
         ) : (
-          <button className="update-btn" onClick={() => setIsEditing(true)}>
+          <Button variant="secondary" className="update-btn" onClick={() => setIsEditing(true)}>
             Update
-          </button>
+          </Button>
         )}
-        <button className="delete-btn" onClick={() => onDelete(todo.id)}>
-          ✕
-        </button>
+        <Button variant="danger" className="delete-btn" onClick={() => onDelete(todo.id)}>
+          X
+        </Button>
       </div>
     </div>
   );

@@ -1,0 +1,15 @@
+.custom-input {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #b3b3b3;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-input:focus {
+  border: 1.5px solid #3b82f6;
+  background: #f0f8ff;
+}

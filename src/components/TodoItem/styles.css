@@ -6,8 +6,21 @@
   margin-bottom: 8px;
   border-radius: 6px;
   border: 1px solid #ddd;
-  font-size: large;
+  font-size: larger;
   font-weight: bold;
+  color: #000;
+  background-color: white;
+}
+
+.todo-item:hover {
+  background-color: #f9f9f9;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 
 .todo-item label {

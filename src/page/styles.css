@@ -18,3 +18,12 @@
   border-radius: 1rem;
   text-align: center;
 }
+
+.container .input {
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.container .list {
+  padding: 0 2rem;
+}
